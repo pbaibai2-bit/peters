@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Add Rent Payment</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+background:#f4f6f9;
+}
+
+form{
+background:white;
+padding:30px;
+border-radius:8px;
+width:400px;
+}
+
+button{
+padding:10px 20px;
+background:#2ecc71;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+a{
+display:block;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Add Rent Payment</h1>
+
+<form method="post">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button type="submit">Save Payment</button>
+
+</form>
+
+<a href="/">← Back to Dashboard</a>
+
+</body>
+</html>

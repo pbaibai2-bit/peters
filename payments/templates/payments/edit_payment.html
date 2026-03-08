@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Edit Payment</title>
+</head>
+
+<body>
+
+<h1>Edit Payment</h1>
+
+<form method="post">
+{% csrf_token %}
+
+<label>Month</label><br>
+<input type="text" name="month" value="{{ payment.month_covered }}"><br><br>
+
+<label>Year</label><br>
+<input type="number" name="year" value="{{ payment.year }}"><br><br>
+
+<label>Amount</label><br>
+<input type="number" name="amount" value="{{ payment.amount }}"><br><br>
+
+<label>Date Paid</label><br>
+<input type="date" name="date_paid" value="{{ payment.date_paid }}"><br><br>
+
+<label>Remarks</label><br>
+<input type="text" name="remarks" value="{{ payment.remarks }}"><br><br>
+
+<label>Paid</label>
+<input type="checkbox" name="is_paid" {% if payment.is_paid %}checked{% endif %}><br><br>
+
+<button type="submit">Save Changes</button>
+
+</form>
+
+</body>
+</html>

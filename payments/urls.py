@@ -1,0 +1,1 @@
+path('generate-months/', views.generate_months, name='generate_months'),
